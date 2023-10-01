@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Lato:ital,wght@0,400;0,700;1,400&family=Poppins:wght@100;300;400;500;600&family=Roboto:wght@300&family=Rubik&display=swap');
+
+* {
+    margin: 0;
+    padding: 5;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    color: #41e418;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #23242a;
+    /* color: #00ff04; */
+}
+
+.button {
+    width: 66px;
+    padding: 20px;
+    margin: 0 3px;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    /* overflow: hidden; */
+
+}
+
+.button:hover {
+    background-color: hsl(96, 100%, 64%);
+}
+
+.row {
+    margin: 8px 0;
+}
+
+.row input {
+    margin: 0;
+    height: 50px;
+    font-size: 25px;
+    padding-top: 10px 10px;
+    border: 2px solid rgb(220, 203, 203);
+    border-radius: 5px;
+}
+
+.form {
+    position: absolute;
+    inset: 3px;
+    border-radius: 8px;
+    background-color: #28292d;
+    z-index: 10;
+
+}
+
+.box {
+    position: relative;
+    width: 380px;
+    height: 620px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    width: 380px;
+    top: -50%;
+    left: -50%;
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+    height: 620px;
+    background: linear-gradient(0deg, transparent, #00ff04);
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    width: 380px;
+    top: -50%;
+    left: -50%;
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+    height: 620px;
+    background: linear-gradient(0deg, transparent, rgb(51, 255, 0));
+    animation-delay: -3s;
+}
+
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
